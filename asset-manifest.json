@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/san.me/static/css/main.9888fc28.css",
-    "main.js": "/san.me/static/js/main.06a75592.js",
+    "main.css": "/san.me/static/css/main.f8710bad.css",
+    "main.js": "/san.me/static/js/main.1d05d706.js",
     "static/js/787.0da91f26.chunk.js": "/san.me/static/js/787.0da91f26.chunk.js",
     "static/media/sanport.png": "/san.me/static/media/sanport.6f2f50a5b2569a294c8b.png",
     "index.html": "/san.me/index.html",
-    "main.9888fc28.css.map": "/san.me/static/css/main.9888fc28.css.map",
-    "main.06a75592.js.map": "/san.me/static/js/main.06a75592.js.map",
+    "main.f8710bad.css.map": "/san.me/static/css/main.f8710bad.css.map",
+    "main.1d05d706.js.map": "/san.me/static/js/main.1d05d706.js.map",
     "787.0da91f26.chunk.js.map": "/san.me/static/js/787.0da91f26.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9888fc28.css",
-    "static/js/main.06a75592.js"
+    "static/css/main.f8710bad.css",
+    "static/js/main.1d05d706.js"
   ]
 }
