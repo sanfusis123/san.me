@@ -27,17 +27,9 @@ const useStyle = makeStyles((theme)=>({
 
 const links = [
     {
-        icon :LocationOnIcon ,
-        link : 'Lucknow , India',
-        href : 'https://goo.gl/maps/LAaPefwH9iaAFaHa7'
-    },
-    {
         icon :MailIcon ,
-        link : 'sm318330@gmail.com',
-    },
-    {
-        icon : PhoneAndroidIcon,
-        link:'+91 6388435534'
+        link : 'sanmaurya.ai@gmail.com',
+        href : 'mailto:sanmaurya.ai@gmail.com'
     },
     {
         icon :LinkedInIcon ,

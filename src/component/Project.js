@@ -1,114 +1,115 @@
 import * as React from 'react';
-import {  styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import { Typography } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Card, CardContent, CardActions, Typography, Button, Grid, Box, Chip } from '@mui/material';
 import Divider from '@mui/material/Divider';
+import LaunchIcon from '@mui/icons-material/Launch';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: 'inherit',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-  minWidth:300,
-  height:500,
- alignItems:'center',
- marginBottom:30
-}));
+const projectIcons = {
+  'Fundz Bot': '💰',
+  'Policy Agent': '📋',
+  'AI-Yoga Trainer': '🧘'
+};
 
-
-const allpros =  [
+const projects = [
   {
-    name: 'E-commerce Web Application',
-    tech: '(Web Deveplopment Project)',
-    points: ["● I built a MERN stack ecommerce single page web application and deployed it to the netlify server.",
-      "● Users could sign up, sign in, search for products, buy products, and filter by category in this application, while administrators could add products, add categories, modify products, and delete products."   ],
-    projectlink: 'https://sanecommerce.netlify.app/',
-    website: 'https://sanecommerce.netlify.app/'           
+    name: 'Fundz Bot',
+    company: 'At Prudent',
+    description: [
+      'Developed a multi-agent system to handle FAQs, scheme-related queries, general investment assistance, and strategic fund recommendations. Implemented in pure Python using a tree-based delegation strategy.',
+      'Optimized latency and delegation efficiency by transitioning to a LangGraph-based agentic workflow with strategic agent switching.',
+      'Utilized vector stores to resolve entity name ambiguity and enhance fund search capabilities through vector-based recommendations.'
+    ],
+    technologies: ['ChatGPT', 'Groq', 'ChromaDB', 'LangGraph', 'Redis'],
   },
   {
-    name: 'Recommendation of coupons in vehicles',
-    tech: '(Machine Learning Project)',
-    points: [ "● I trained our dataset with all classification methods including Logistic Regression,KNN,SVM and Random Forest.",
-    "● SVM machine learning model that predicts coupons in vehicles with an accuracy of 75.6%.",
-    "● This model used support vector machine radial basis function algorithms, and to increase accuracy, we used the GridSearchCV hyperparameter.",
-
-                ],
-    projectlink: 'https://github.com/sanfusis123/recommendation-of-coupons/blob/main/In-Vehicle-Coupon.ipynb',
-    website: 'https://sanfusis123.github.io/recommendation-of-coupons/'           
+    name: 'Policy Agent',
+    company: 'Client At Ocius',
+    description: [
+      'Built a Policy Agent system that processed over 40,000+ healthcare insurance documents to resolve user queries using generative AI, with automatic context retrieval and multi-agent reasoning.',
+      'Implemented RAG-based QA system with features like document search, automatic context selection, and document comparison using LangChain, Hugging Face embeddings, ChromaDB.',
+      'Created intelligent workflows with LangGraph to determine retrieval strategies (e.g., synopsis-based search), and used GPT-based LLMs to generate accurate, streaming responses across multiple agents.'
+    ],
+    technologies: ['LangChain', 'Hugging Face', 'ChromaDB', 'LangGraph', 'GPT-4'],
   },
   {
-    name: 'By Drug Review Condition & Sentiment Analysis',
-    tech: '(Machine Learning NLP project)',
-    points: ["● I train a  deep learning Keras model to condition prediction with tha accuracy 87%. ",
-      "● A Keras sequential deep neural network model to alalysis of sentiments with accuracy 87.7",
-      "● We could alos predict the rating by the review." ],
-    projectlink: 'https://sanfusis123.github.io/SIC-Project/',
-    website: 'https://sanfusis123.github.io/SIC-Project/'           
+    name: 'AI-Yoga Trainer',
+    company: 'Client At Ocius',
+    description: [
+      'Developed an AI-powered personal yoga trainer to help users assess whether they are performing exercises correctly, providing exercise counts and a percentage of correctness for each movement.',
+      'Based on body focus, age group, fitness level, objective, and duration, users can generate yoga classes to their preferences.',
+      'Implemented a freestyle mode where users follow yoga videos and receive real-time feedback with a correctness score, while the system automatically detects and identifies the exercises being performed.',
+      'AI-Trainer utilizes Mediapipe pose detection to capture landmarks and employs deep learning models to predict whether the exercises are being performed correctly.'
+    ],
+    technologies: ['MediaPipe', 'TensorFlow', 'Deep Learning', 'Computer Vision', 'Python'],
   }
-]
+];
 
-
-
-export default function RowAndColumnSpacing() {
-
+export default function Projects() {
   return (
-   <>
-    <Divider>
-      <h1>Proejcts</h1>
-    </Divider>
-    {allpros.map((proj , i)=>(
-      <Box sx={{ width: '100%' }}>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs>
-          <Item >
-            <Typography variant='h4' gutterBottom paddingTop={10}>
-            {proj.name}
-            </Typography>
-            <Typography variant='h6' gutterBottom>
-            {proj.tech}
-            </Typography>
-            {
-                proj.points.map((itme,i)=>(
-                                    
-                                <Typography variant='subtitle1' key={i} gutterBottom>
-                                    {itme}
-                                </Typography>
-                                ))
-            }
-            <Typography variant='subtitle1' key={1}>
-           </Typography>
-           <Typography variant='subtitle1' key={10}>
-           "● Project Link - <a href={proj.projectlink}>
-            {proj.projectlink}
-           </a>     
-           </Typography>
-           <Typography variant='h6' paddingTop={10}>
-            Preview    <ArrowForwardIcon/>
-           </Typography>
-           </Item>
+    <>
+      <Divider sx={{ mt: 4 }}>
+        <Typography variant="h3" sx={{ fontWeight: 'bold', background: 'linear-gradient(45deg, #764ba2, #667eea)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          🚀 ML Projects
+        </Typography>
+      </Divider>
+      
+      <Box sx={{ p: 3 }}>
+        <Grid container spacing={3}>
+          {projects.map((project, index) => (
+            <Grid item xs={12} md={6} lg={4} key={index}>
+              <Card 
+                sx={{ 
+                  height: '100%', 
+                  display: 'flex', 
+                  flexDirection: 'column',
+                  transition: 'transform 0.3s, box-shadow 0.3s',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: 4
+                  }
+                }}
+              >
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography variant="h5" component="div" gutterBottom sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <span style={{ fontSize: '1.5rem' }}>{projectIcons[project.name]}</span>
+                    {project.name}
+                  </Typography>
+                  <Typography sx={{ mb: 2, fontSize: 14 }} color="text.secondary">
+                    {project.company}
+                  </Typography>
+                  {project.description.map((desc, i) => (
+                    <Typography variant="body2" paragraph key={i}>
+                      • {desc}
+                    </Typography>
+                  ))}
+                  <Box sx={{ mt: 2, display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                    {project.technologies.map((tech, idx) => (
+                      <Chip 
+                        key={idx} 
+                        label={tech} 
+                        size="small" 
+                        color="primary" 
+                        variant="outlined"
+                      />
+                    ))}
+                  </Box>
+                </CardContent>
+                {project.link && (
+                  <CardActions>
+                    <Button 
+                      size="small" 
+                      href={project.link} 
+                      target="_blank"
+                      endIcon={<LaunchIcon />}
+                    >
+                      View Project
+                    </Button>
+                  </CardActions>
+                )}
+              </Card>
+            </Grid>
+          ))}
         </Grid>
-        <Grid item xs>
-          <Item>
-            <iframe src={proj.website}
-             width={'100%'}
-             height={'500'}
-             frameborder={"0"} border={"0"}
-             title={proj.name}
-             >
-            
-            </iframe>
-          </Item>
-        </Grid>
-      </Grid>
-    </Box>
-
-
-    ))}
-    
+      </Box>
     </>
   );
 }
