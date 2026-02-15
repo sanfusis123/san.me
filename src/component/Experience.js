@@ -105,13 +105,52 @@ export default function CustomizedTimeline() {
             </Typography>
             <Typography color="secondary">Python Intern</Typography>
             <Box sx={{ mt: 1 }}>
-              <Typography variant="subtitle2">● Developed an end-to-end object detection system for identifying defective biscuits using OpenCV, Keras-CV, TensorFlow, and multiprocessing to handle multi-camera input.</Typography>
-              <Typography variant="subtitle2">● Built a document-based chatbot using LangChain, Hugging Face Mistral LLM, and MongoDB for intelligent retrieval and question answering over unstructured documents.</Typography>
+              <Typography variant="subtitle2">
+                ● Developed an end-to-end object detection system for identifying defective biscuits using OpenCV, Keras-CV, TensorFlow, and multiprocessing to handle multi-camera input.
+              </Typography>
+              <Typography variant="subtitle2">
+                ● Built a document-based chatbot using LangChain, Hugging Face Mistral LLM, and MongoDB for intelligent retrieval and question answering over unstructured documents.
+              </Typography>
             </Box>
           </TimelineContent>
         </TimelineItem>
 
+
         <TimelineItem key={4}>
+          <TimelineOppositeContent
+            sx={{ m: 'auto 0' }}
+            variant="body2"
+            color="text.secondary"
+          >
+            Mar 2023 - Aug 2023
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+            <TimelineDot color="secondary">
+              <SmartToyIcon fontSize='large' />
+            </TimelineDot>
+            <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Typography variant="h6" component="span">
+              Evigure Solutions
+            </Typography>
+            <Typography color="secondary">
+              Machine Learning Engineer Intern
+            </Typography>
+            <Box sx={{ mt: 1 }}>
+              <Typography variant="subtitle2">
+                ● Designed and implemented a coupon recommendation system using collaborative filtering and content-based filtering techniques to personalize user offers and improve engagement rates.
+              </Typography>
+              <Typography variant="subtitle2">
+                ● Built and optimized machine learning models (Logistic Regression, XGBoost) to predict coupon redemption probability, improving recommendation accuracy and conversion performance.
+              </Typography>
+            </Box>
+          </TimelineContent>
+        </TimelineItem>
+
+
+        <TimelineItem key={5}>
           <TimelineOppositeContent
             sx={{ m: 'auto 0' }}
             variant="body2"
@@ -130,10 +169,16 @@ export default function CustomizedTimeline() {
             <Typography variant="h6" component="span">
               Samsung Innovation Campus India
             </Typography>
-            <Typography color="secondary">Artificial Intelligence Trainee</Typography>
+            <Typography color="secondary">
+              Artificial Intelligence Trainee
+            </Typography>
             <Box sx={{ mt: 1 }}>
-              <Typography variant="subtitle2">● Enhanced traditional machine learning models by implementing deep learning approaches on unstructured data.</Typography>
-              <Typography variant="subtitle2">● Utilized CNNs for image classification and RNNs (LSTM, GRU) for sequence-to-sequence tasks, resulting in improved prediction accuracy and precision.</Typography>
+              <Typography variant="subtitle2">
+                ● Enhanced traditional machine learning models by implementing deep learning approaches on unstructured data.
+              </Typography>
+              <Typography variant="subtitle2">
+                ● Utilized CNNs for image classification and RNNs (LSTM, GRU) for sequence-to-sequence tasks, resulting in improved prediction accuracy and precision.
+              </Typography>
             </Box>
           </TimelineContent>
         </TimelineItem>

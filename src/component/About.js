@@ -55,7 +55,7 @@ export default function CenteredElementGrid() {
              <Box sx={{ mt: 3, mb: 2, p: 2, borderRadius: 2, background: 'rgba(102, 126, 234, 0.1)', border: '1px solid rgba(102, 126, 234, 0.3)' }}>
                 <Typography variant='h6' sx={{ color: '#818cf8', mb: 1, fontWeight: 'bold' }}>💡 Professional Summary</Typography>
              <Typography variant='body1' gutterBottom sx={{ textAlign: 'justify', lineHeight: 1.8, color: '#e0e0e0' }}>
-                An applied learner and a result-oriented Machine Learning Engineer with 2+ years of experience in translating business requirements into Data Science solutions and building creative end-to-end solutions to drive business objectives and provide decision intelligence for guided decision-making.
+                An applied learner and a result-oriented Machine Learning Engineer with ~ 3 years of experience in translating business requirements into Data Science solutions and building creative end-to-end solutions to drive business objectives and provide decision intelligence for guided decision-making.
               </Typography>
              </Box>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3, gap: 2 }}>
